@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sarcina 10 - Venituri</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+</head>
+<body>
+
+    <header>
+        <h1>Înregistrare și Sincronizare Venituri</h1>
+        <a href="index.html" class="back-btn">← Meniu</a>
+    </header>
+
+    <main class="container">
+        <!-- Meniu lateral (simulat) -->
+        <div class="category-card" style="margin-bottom: 20px;">
+            <h3 style="margin-top: 0;">Meniu</h3>
+            <div style="display: flex; flex-direction: column; gap: 8px;">
+                <div style="padding: 10px; border-radius: 5px; cursor: pointer; background-color: #f5f5f5;">
+                    Bugetare
+                </div>
+                <div style="padding: 10px; border-radius: 5px; cursor: pointer; background-color: #f5f5f5;">
+                    Tranzacție nouă
+                </div>
+                <div style="padding: 10px; border-radius: 5px; cursor: pointer; background-color: #f5f5f5;">
+                    Rapoarte
+                </div>
+                <div style="padding: 10px; border-radius: 5px; cursor: pointer; background-color: #f5f5f5;">
+                    Setări familie
+                </div>
+                <div style="padding: 10px; border-radius: 5px; cursor: pointer; background-color: #f5f5f5;">
+                    Obiective
+                </div>
+                <div style="padding: 10px; border-radius: 5px; cursor: pointer; background-color: #ffc107; color: #333; font-weight: bold;">
+                    ✓ Venituri
+                </div>
+            </div>
+        </div>
+
+        <!-- Lista de venituri -->
+        <div class="category-card" style="margin-bottom: 20px;">
+            <h3 style="margin-top: 0;">Venituri</h3>
+            <div id="incomes-list" style="display: flex; flex-direction: column; gap: 8px; margin-bottom: 15px;">
+                <!-- Veniturile vor fi populate din JavaScript -->
+            </div>
+            <button id="btn-new-income" class="btn-primary" style="width: 100%; background-color: #ffc107; color: #333;">
+                + Venit nou
+            </button>
+            <button id="btn-close-incomes" class="btn-secondary" style="width: 100%; margin-top: 10px;">
+                Închide
+            </button>
+        </div>
+
+        <!-- Formular pentru venit nou -->
+        <div id="new-income-form" class="category-card" style="display: none;">
+            <h3 style="margin-top: 0;">Venit nou</h3>
+            
+            <div style="margin-bottom: 15px;">
+                <label style="display: block; margin-bottom: 5px; font-weight: bold;">Suma:</label>
+                <input type="number" id="income-amount" placeholder="Ex: 5000" min="0" step="0.01"
+                       style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 5px; box-sizing: border-box;">
+            </div>
+
+            <div style="margin-bottom: 15px;">
+                <label style="display: block; margin-bottom: 5px; font-weight: bold;">Sursa:</label>
+                <input type="text" id="income-source" placeholder="Ex: Salariu, Freelance, etc." 
+                       style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 5px; box-sizing: border-box;">
+            </div>
+
+            <div style="margin-bottom: 15px;">
+                <label style="display: block; margin-bottom: 5px; font-weight: bold;">Data:</label>
+                <input type="date" id="income-date" 
+                       style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 5px; box-sizing: border-box;">
+            </div>
+
+            <div style="margin-bottom: 20px;">
+                <label style="display: block; margin-bottom: 5px; font-weight: bold;">Recurență:</label>
+                <select id="income-recurrence" 
+                        style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 5px; box-sizing: border-box; background-color: white;">
+                    <option value="once">O singură dată</option>
+                    <option value="weekly">Săptămânal</option>
+                    <option value="monthly" selected>Lunar</option>
+                    <option value="yearly">Anual</option>
+                </select>
+            </div>
+
+            <div style="display: flex; gap: 10px;">
+                <button id="btn-save-income" class="btn-primary" style="flex: 1;">
+                    Salvează
+                </button>
+                <button id="btn-cancel-income" class="btn-secondary" style="flex: 1;">
+                    Anulează
+                </button>
+            </div>
+        </div>
+
+        <!-- Mesaj de confirmare -->
+        <div id="confirmation-message" style="display: none;"></div>
+    </main>
+
+    <script src="js/data2.js"></script>
+    <script src="js/task10.js"></script>
+</body>
+</html>
