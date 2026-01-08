@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sarcina 7 - Reconciliere Lunară</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+</head>
+<body>
+
+    <header>
+        <h1>Închidere Lună - Octombrie</h1>
+        <a href="index.html" class="back-btn">← Meniu</a>
+    </header>
+
+    <main class="container">
+        <div class="category-card" style="text-align: center;">
+            <h2>Sumar Financiar</h2>
+            <div id="reconciliation-summary">
+                <p>Se încarcă datele...</p>
+            </div>
+        </div>
+
+        <div id="action-area" style="text-align: center; margin-top: 20px; display: none;">
+            <p class="money-details">Ai o balanță pozitivă! Ce facem cu surplusul?</p>
+            <button id="btn-save" class="btn-primary">Transferă în Economii</button>
+            <button id="btn-leave" class="btn-secondary">Lasă în cont curent</button>
+        </div>
+    </main>
+
+    <script src="js/data.js"></script>
+    <script src="js/task7.js"></script>
+</body>
+</html>

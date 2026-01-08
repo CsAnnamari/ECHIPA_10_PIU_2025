@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sarcina 12 - Cash Flow</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <style>
+        /* CSS Specific pentru Grafic - inline sau mutat în dashboard.css */
+        .chart-container {
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-around;
+            height: 200px;
+            border-bottom: 2px solid #ccc;
+            padding-bottom: 5px;
+            margin: 20px 0;
+        }
+        .bar-group {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 12%;
+        }
+        .bar {
+            width: 100%;
+            background-color: #4a90e2;
+            border-radius: 3px 3px 0 0;
+            transition: height 1s;
+        }
+        .bar-label {
+            margin-top: 5px;
+            font-size: 0.8rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Raport Cash Flow</h1>
+        <a href="index.html" class="back-btn">← Meniu</a>
+    </header>
+
+    <main class="container">
+        <div class="category-card">
+            <div class="card-header">
+                <h3>Evoluție (Ultimele 6 Luni)</h3>
+                <select id="period-select">
+                    <option value="6">6 Luni</option>
+                    <option value="3">3 Luni</option>
+                </select>
+            </div>
+
+            <div id="chart-display" class="chart-container">
+                </div>
+            
+            <div style="text-align: center; font-size: 0.8em; color: gray;">
+                * Bara reprezintă Balanța Netă (Venit - Cheltuieli)
+            </div>
+        </div>
+
+        <div class="category-card">
+            <h3>Date Detaliate</h3>
+            <table style="width: 100%; border-collapse: collapse;">
+                <thead>
+                    <tr style="border-bottom: 1px solid #ddd; text-align: left;">
+                        <th>Lună</th>
+                        <th>Venit</th>
+                        <th>Cheltuieli</th>
+                        <th>Net</th>
+                    </tr>
+                </thead>
+                <tbody id="history-table-body">
+                    </tbody>
+            </table>
+        </div>
+
+        <div style="text-align: center; margin-top: 20px;">
+            <button onclick="exportReport('PDF')" class="btn-primary" style="background-color: #e74c3c;">Exportă PDF</button>
+            <button onclick="exportReport('CSV')" class="btn-primary" style="background-color: #27ae60;">Exportă CSV</button>
+        </div>
+    </main>
+
+    <script src="js/data.js"></script>
+    <script src="js/task12.js"></script>
+</body>
+</html>
