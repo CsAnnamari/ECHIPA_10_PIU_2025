@@ -22,7 +22,6 @@
     margin-bottom: 5px;
 }
 
-/* Stiluri Bara de Progres */
 .progress-container {
     background-color: #e0e0e0;
     border-radius: 5px;
@@ -37,17 +36,16 @@
     transition: width 0.5s ease-in-out;
 }
 
-/* Culori pentru status [cite: 733] */
 .status-ok {
-    background-color: #2ecc71; /* Verde */
+    background-color: #2ecc71;
 }
 
 .status-warning {
-    background-color: #f1c40f; /* Galben */
+    background-color: #f1c40f;
 }
 
 .status-danger {
-    background-color: #e74c3c; /* Roșu - pentru depășiri */
+    background-color: #e74c3c;
 }
 
 .over-budget-text {
@@ -57,14 +55,12 @@
     display: block;
     font-size: 0.9em;
 }
-/* CSS CORECTAT PENTRU GRAFIC */
+
 .chart-container {
     display: flex;
-    /* Aliniem elementele jos */
-    align-items: flex-end; 
+    align-items: flex-end;     
     justify-content: space-around;
-    /* Graficul are o înălțime fixă de 200px */
-    height: 200px; 
+    height: 200px;             
     border-bottom: 2px solid #ccc;
     padding-bottom: 5px;
     margin: 20px 0;
@@ -74,19 +70,16 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* PIMPING: Elementele din grup (bara și textul) se duc jos */
-    justify-content: flex-end; 
     width: 12%;
-    /* FIX-UL CRITIC: Grupul trebuie să ocupe toată înălțimea graficului */
-    height: 100%; 
+        height: 100%;             
+    justify-content: flex-end; 
 }
 
 .bar {
     width: 100%;
-    /* Culoare default, va fi suprascrisă de JS */
-    background-color: #4a90e2; 
+    background-color: #4a90e2;
     border-radius: 4px 4px 0 0;
-    transition: height 1s ease-in-out;
+    transition: height 1s ease-in-out; 
 }
 
 .bar-label {

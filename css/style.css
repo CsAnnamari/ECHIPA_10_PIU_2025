@@ -17,7 +17,7 @@ header {
 }
 
 .container {
-    max-width: 600px; /* Optimizat pentru mobil/tabletă conform cerințelor */
+    max-width: 600px;
     margin: 20px auto;
     padding: 0 15px;
 }
@@ -27,7 +27,7 @@ header {
     text-decoration: none;
     font-weight: bold;
 }
-/* Butoane pentru acțiuni */
+
 .btn-primary, .btn-secondary {
     padding: 10px 20px;
     border: none;
@@ -39,13 +39,13 @@ header {
 }
 
 .btn-primary {
-    background-color: #2ecc71; /* Verde */
+    background-color: #2ecc71;
     color: white;
 }
 .btn-primary:hover { background-color: #27ae60; }
 
 .btn-secondary {
-    background-color: #95a5a6; /* Gri */
+    background-color: #95a5a6;
     color: white;
 }
 .btn-secondary:hover { background-color: #7f8c8d; }
@@ -55,8 +55,6 @@ header {
     font-weight: bold;
     margin: 10px 0;
 }
-
-/* --- Stiluri pentru Meniul Principal (Dashboard) --- */
 
 .menu-grid {
     display: grid;
@@ -94,7 +92,6 @@ header {
     margin: 0;
 }
 
-/* Stiluri pentru iconițe rotunde */
 .icon-container {
     width: 60px;
     height: 60px;

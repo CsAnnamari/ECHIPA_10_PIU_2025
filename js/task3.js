@@ -3,22 +3,18 @@
 document.addEventListener('DOMContentLoaded', () => {
     const listContainer = document.getElementById('budget-list');
 
-    // Iterăm prin categoriile din data.js
     currentMonthData.categories.forEach(cat => {
-        // 1. Calcule
-        const percent = Math.min((cat.spent / cat.budgeted) * 100, 100); // Max 100% pentru lățime
+        const percent = Math.min((cat.spent / cat.budgeted) * 100, 100);
         const difference = cat.budgeted - cat.spent;
         const isOverBudget = difference < 0;
 
-        // 2. Determinăm culoarea (Clasa CSS)
         let statusClass = 'status-ok';
         if (isOverBudget) {
-            statusClass = 'status-danger'; // Roșu conform [cite: 733]
+            statusClass = 'status-danger';
         } else if (percent > 80) {
-            statusClass = 'status-warning'; // Galben
+            statusClass = 'status-warning';
         }
 
-        // 3. Creăm HTML-ul pentru card
         const card = document.createElement('div');
         card.className = 'category-card';
 
@@ -41,7 +37,6 @@ document.addEventListener('DOMContentLoaded', () => {
             </div>
         `;
 
-        // 4. Adăugăm în pagină
         listContainer.appendChild(card);
     });
 });

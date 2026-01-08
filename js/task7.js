@@ -5,14 +5,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const actionArea = document.getElementById('action-area');
     const btnSave = document.getElementById('btn-save');
 
-    // 1. Calculăm total cheltuieli din lista de categorii
-    // Folosim reduce pentru a aduna toate valorile "spent"
     const totalSpent = currentMonthData.categories.reduce((acc, cat) => acc + cat.spent, 0);
-    
-    // 2. Calculăm balanța
     const balance = currentMonthData.totalIncome - totalSpent;
 
-    // 3. Afișăm în HTML
     summaryContainer.innerHTML = `
         <div class="money-details">
             <span>Venit Total:</span>
@@ -29,15 +24,12 @@ document.addEventListener('DOMContentLoaded', () => {
         <p>Balanță Finală (Calculată)</p>
     `;
 
-    // 4. Logică Reconciliere (doar dacă avem surplus)
     if (balance > 0) {
         actionArea.style.display = 'block';
 
         btnSave.addEventListener('click', () => {
-            // Simulare transfer conform scenariului Sarcina 7
-            const savingsGoal = "Vacanță Grecia"; // Exemplu din documentație
+            const savingsGoal = "Vacanță Grecia";
             alert(`Succes! Suma de ${balance} RON a fost transferată către obiectivul '${savingsGoal}'. Luna este închisă.`);
-            // Aici s-ar putea dezactiva butoanele
             actionArea.innerHTML = `<p style="color: green; font-weight: bold;">✔ Lună reconciliată cu succes.</p>`;
         });
     } else {
