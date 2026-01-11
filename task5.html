@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sarcina 5 - Obiective de Economii</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <script src="js/task5.js"></script>
+</head>
+<body>
+
+<header>
+    <h1>Obiective de Economii</h1>
+    <a href="index.html" class="back-btn">← Meniu</a>
+</header>
+
+<main class="container">
+
+    <div class="category-card">
+
+        <div class="card-header">
+            <span>Obiectiv nou</span>
+            <span>Copil</span>
+        </div>
+
+        <!-- SELECT COPIL -->
+        <div class="money-details">
+            <span>Copil</span>
+            <select id="copil">
+                <option value="">Selectează copil</option>
+                <option value="Ana">Ana</option>
+                <option value="Raul">Raul</option>
+                <option value="Dan">Dan</option>
+            </select>
+        </div>
+
+        <div class="money-details">
+            <span>Nume obiectiv</span>
+            <input type="text" id="numeObiectiv" placeholder="Ex: Joc video">
+        </div>
+
+        <div class="money-details">
+            <span>Sumă totală</span>
+            <input type="number" id="sumaTotala" placeholder="250"> RON
+        </div>
+
+        <div class="money-details">
+            <span>Alocare inițială</span>
+            <input type="number" id="alocare" placeholder="30"> RON
+        </div>
+
+        <button class="btn-primary" onclick="creeazaObiectiv()">
+            Creează obiectiv
+        </button>
+
+    </div>
+
+    <!-- AFISARE OBIECTIV -->
+    <div class="category-card" id="obiectivCard" style="display:none;">
+
+        <div class="card-header">
+            <span id="titluObiectiv">Obiectiv</span>
+            <span id="numeCopil">Copil</span>
+        </div>
+
+        <div class="money-details">
+            <span>Economisit</span>
+            <span><strong id="economisit">0</strong> RON</span>
+        </div>
+
+        <div class="money-details">
+            <span>Total necesar</span>
+            <span><strong id="total">0</strong> RON</span>
+        </div>
+
+        <div class="progress-container">
+            <div id="progressBar" class="progress-bar status-ok" style="width: 0%;"></div>
+        </div>
+
+        <span id="mesaj" class="over-budget-text"></span>
+
+    </div>
+
+</main>
+
+</body>
+</html>

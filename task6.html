@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sarcina 6 - Sarcini pentru Copii</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <script src="js/task6.js"></script>
+</head>
+<body>
+
+<header>
+    <h1>Sarcini pentru Copii</h1>
+    <a href="index.html" class="back-btn">← Meniu</a>
+</header>
+
+<main class="container">
+
+    <!-- CREARE SARCINA -->
+    <div class="category-card">
+
+        <div class="card-header">
+            <span>Sarcină nouă</span>
+            <span>Părinte</span>
+        </div>
+
+        <div class="money-details">
+            <span>Copil</span>
+            <select id="copil">
+                <option value="">Selectează copil</option>
+                <option value="Ana">Ana</option>
+                <option value="Raul">Raul</option>
+                <option value="Dan">Dan</option>
+            </select>
+        </div>
+
+        <div class="money-details">
+            <span>Descriere sarcină</span>
+            <input type="text" id="descriere" placeholder="Ex: Plimbat câinele 7 zile">
+        </div>
+
+        <div class="money-details">
+            <span>Recompensă</span>
+            <input type="number" id="recompensa" placeholder="15"> RON
+        </div>
+
+        <div class="money-details">
+            <span>Limită</span>
+            <input type="date" id="limita">
+        </div>
+
+        <button class="btn-primary" onclick="creeazaSarcina()">
+            Creează sarcina
+        </button>
+
+    </div>
+
+    <!-- SARCINA ACTIVA -->
+    <div class="category-card" id="taskCard" style="display:none;">
+
+        <div class="card-header">
+            <span id="taskTitlu">Sarcină</span>
+            <span id="taskCopil">Copil</span>
+        </div>
+
+        <div class="money-details">
+            <span>Recompensă</span>
+            <span><strong id="taskRecompensa">0</strong> RON</span>
+        </div>
+
+        <div class="progress-container">
+            <div id="taskStatusBar" class="progress-bar status-warning" style="width: 33%;"></div>
+        </div>
+
+        <span id="taskStatusText" class="over-budget-text">
+            Sarcina este în desfășurare.
+        </span>
+
+        <button class="btn-secondary" onclick="finalizeazaSarcina()">
+            Copil: Marchează finalizată
+        </button>
+
+        <button class="btn-primary" onclick="aprobaSarcina()">
+            Părinte: Aprobă
+        </button>
+
+    </div>
+
+</main>
+
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sarcina 4 - Setări Familie</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <script src="js/task4.js"></script>
+</head>
+<body>
+
+<header>
+    <h1>Setări Familie</h1>
+    <a href="index.html" class="back-btn">← Meniu</a>
+</header>
+
+<main class="container">
+
+    <!-- CARD CONFIGURARE COPIL -->
+    <div class="category-card">
+
+        <div class="card-header">
+            <span>Configurare copil</span>
+            <span>Administrator</span>
+        </div>
+
+        <div class="money-details">
+            <span>Nume copil</span>
+            <select id="numeCopil">
+                <option value="">Selectează copil</option>
+                <option value="Ana">Ana</option>
+                <option value="Raul">Raul</option>
+                <option value="Dan">Dan</option>
+            </select>
+        </div>
+
+        <div class="money-details">
+            <span>Rol</span>
+            <strong>Copil (Utilizator Junior)</strong>
+        </div>
+
+        <div class="money-details">
+            <span>Alocație lunară</span>
+            <input type="number" id="alocatie" value="100" min="0"> RON
+        </div>
+
+        <div class="money-details">
+            <span>Zi transfer alocație</span>
+            <input type="number" id="ziTransfer" value="1" min="1" max="28">
+        </div>
+
+        <div class="money-details">
+            <span>Limită fără aprobare</span>
+            <input type="number" id="limita" value="20" min="0"> RON
+        </div>
+
+        <button class="btn-primary" onclick="salveazaCopil()">
+            Salvează copil
+        </button>
+
+        <span id="mesaj" class="over-budget-text" style="display:none;"></span>
+
+    </div>
+
+</main>
+
+</body>
+</html>
