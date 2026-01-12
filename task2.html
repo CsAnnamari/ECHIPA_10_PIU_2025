@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sarcina 2 - Înregistrare Tranzacție</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <script src="js/data.js"></script>
+    <script src="js/task2.js"></script>
+</head>
+<body>
+<header>
+    <h1>Înregistrare Tranzacție</h1>
+    <a href="index.html" class="back-btn">← Meniu</a>
+</header>
+<main class="container">
+    <div class="category-card">
+        <div class="card-header">
+            <span>Adaugă cheltuială</span>
+            <span>Părinte / Copil</span>
+        </div>
+        <div class="money-details">
+            <span>Suma</span>
+            <input type="number" id="tx-amount" min="0.01" step="0.01" placeholder="150.45"> RON
+        </div>
+        <div class="money-details">
+            <span>Data</span>
+            <input type="date" id="tx-date">
+        </div>
+        <div class="money-details">
+            <span>Categorie principală</span>
+            <select id="tx-category"></select>
+        </div>
+        <div class="money-details">
+            <span>Împarte tranzacția</span>
+            <input type="checkbox" id="tx-split">
+        </div>
+        <div id="split-container" style="display:none; margin-top:8px;">
+            <div class="money-details">
+                <span>Parte 1</span>
+                <input type="number" id="split-amount-1" min="0" step="0.01" placeholder="100.00"> RON
+                <select id="split-category-1"></select>
+            </div>
+            <div class="money-details">
+                <span>Parte 2</span>
+                <input type="number" id="split-amount-2" min="0" step="0.01" placeholder="50.45"> RON
+                <select id="split-category-2"></select>
+            </div>
+            <span id="split-hint" class="over-budget-text">Suma părților trebuie să fie egală cu suma totală.</span>
+        </div>
+        <div class="money-details">
+            <span>Descriere</span>
+            <input type="text" id="tx-desc" placeholder="Ex: Cumpărături săptămânale">
+        </div>
+        <button class="btn-primary" id="btn-save-tx">Salvează tranzacția</button>
+    </div>
+    <div id="confirmation" style="display:none;"></div>
+</main>
+</body>
+</html>

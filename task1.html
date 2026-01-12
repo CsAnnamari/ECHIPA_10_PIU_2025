@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sarcina 1 - Configurare Buget Lunar</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <script src="js/data.js"></script>
+    <script src="js/task1.js"></script>
+</head>
+<body>
+<header>
+    <h1>Configurare Buget Lunar</h1>
+    <a href="index.html" class="back-btn">← Meniu</a>
+</header>
+<main class="container">
+    <div class="category-card">
+        <div class="card-header">
+            <span>Selectează luna</span>
+            <span>Administrator</span>
+        </div>
+        <div class="money-details">
+            <span>Lună</span>
+            <input type="month" id="budget-month">
+        </div>
+        <div class="money-details">
+            <span>Venit total estimat</span>
+            <input type="number" id="income-estimate" min="0" step="0.01" placeholder="5000"> RON
+        </div>
+        <div id="categories-config" style="margin-top: 10px;"></div>
+        <div class="money-details">
+            <span>Categorie personalizată</span>
+            <input type="text" id="custom-cat-name" placeholder="Ex: Activități extrașcolare copil">
+        </div>
+        <div class="money-details">
+            <span>Sumă</span>
+            <input type="number" id="custom-cat-amount" min="0" step="0.01" placeholder="0"> RON
+        </div>
+        <button class="btn-secondary" id="btn-add-category">Adaugă categorie</button>
+        <div class="progress-container" style="margin-top: 14px;">
+            <div id="balance-bar" class="progress-bar status-warning" style="width: 50%;"></div>
+        </div>
+        <div class="money-details" style="margin-top: 6px;">
+            <span>Total alocat: <strong id="total-allocated">0</strong> RON</span>
+            <span>Balanță: <strong id="balance">0</strong> RON</span>
+        </div>
+        <span id="balance-text" class="over-budget-text">Ajustează sumele până când balanța este ≥ 0.</span>
+        <button class="btn-primary" id="btn-save-budget" style="margin-top: 12px;">Salvează bugetul</button>
+    </div>
+</main>
+</body>
+</html>

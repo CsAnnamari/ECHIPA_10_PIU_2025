@@ -41,3 +41,9 @@ const historyData = [
     { month: "Sep", income: 5000, expense: 4200 },
     { month: "Oct", income: 5000, expense: 2620 }
 ];
+
+// Bugete per lună (mock). Populat de pagina Task 1 la salvare.
+let budgetsData = {};
+
+// Tranzacții înregistrate (cheltuieli). Folosit de pagina Task 2.
+let transactionsData = [];

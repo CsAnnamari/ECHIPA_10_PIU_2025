@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sarcina 11 - Alerte Prag Buget</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <script src="js/data.js"></script>
+    <script src="js/task11.js"></script>
+</head>
+<body>
+<header>
+    <h1>Alerte Prag Buget</h1>
+    <a href="index.html" class="back-btn">← Meniu</a>
+</header>
+<main class="container">
+    <!-- Configurare alertă -->
+    <div class="category-card">
+        <div class="card-header">
+            <span>Configurează alertă</span>
+            <span>Părinte</span>
+        </div>
+        <div class="money-details">
+            <span>Luna</span>
+            <input type="month" id="alert-month">
+        </div>
+        <div class="money-details">
+            <span>Categorie</span>
+            <select id="alert-category"></select>
+        </div>
+        <div class="money-details">
+            <span>Prag (%)</span>
+            <input type="number" id="alert-threshold" min="10" max="100" step="1" value="70">
+        </div>
+        <button class="btn-primary" id="btn-save-alert">Salvează alerta</button>
+        <div id="alerts-list" style="margin-top:10px; color:#666; font-size:0.9em;"></div>
+        <span class="over-budget-text" style="display:block; margin-top:8px;">Notificările se bazează pe cheltuielile curente ale lunii.</span>
+    </div>
+
+    <!-- Verifică notificări -->
+    <div class="category-card" style="margin-top: 16px;">
+        <div class="card-header">
+            <span>Notificări</span>
+            <span>Verificare praguri</span>
+        </div>
+        <button class="btn-secondary" id="btn-check-alerts">Verifică acum</button>
+        <div id="notifications-panel" style="margin-top: 10px;"></div>
+    </div>
+</main>
+</body>
+</html>
