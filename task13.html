@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sarcina 13 - Control Acces</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+<script src="js/protect-task.js"></script>
+
+<header>
+    <h1>Control Acces & Rapoarte</h1>
+    <a href="index.html" class="back-btn">← Meniu</a>
+</header>
+
+<main class="container">
+    <!-- Cine este conectat -->
+    <div class="category-card">
+        <div class="card-header">
+            <span>Info Curent</span>
+            <span><i class="fas fa-user-circle"></i></span>
+        </div>
+        <div class="money-details">
+            <span>Utilizator:</span>
+            <strong id="current-user">-</strong>
+        </div>
+        <div class="money-details">
+            <span>Rol:</span>
+            <strong id="current-role">-</strong>
+        </div>
+        <div class="money-details">
+            <span>Sarcini disponibile:</span>
+            <span id="available-tasks">-</span>
+        </div>
+    </div>
+
+    <!-- Acces Sarcini -->
+    <div class="category-card" style="margin-top: 20px;">
+        <div class="card-header">
+            <span>Status Acces Sarcini</span>
+            <span><i class="fas fa-tasks"></i></span>
+        </div>
+        <div id="tasks-status" style="display: grid; gap: 10px;"></div>
+    </div>
+
+    <!-- Statistici Rapide -->
+    <div class="category-card" style="margin-top: 20px;">
+        <div class="card-header">
+            <span>Statistici Sistem</span>
+            <span><i class="fas fa-chart-pie"></i></span>
+        </div>
+        <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 15px;">
+            <div style="background: #e3f2fd; padding: 15px; border-radius: 8px; text-align: center;">
+                <div style="font-size: 2.5rem; font-weight: bold; color: #1976d2;">2</div>
+                <div style="color: #666; font-size: 0.9rem;">Conturi Active</div>
+            </div>
+            <div style="background: #f1f8e9; padding: 15px; border-radius: 8px; text-align: center;">
+                <div style="font-size: 2.5rem; font-weight: bold; color: #33691e;" id="task-count">12</div>
+                <div style="color: #666; font-size: 0.9rem;">Sarcini Totale</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Schimbare Parolă -->
+    <div class="category-card" style="margin-top: 20px;">
+        <div class="card-header">
+            <span>Securitate</span>
+            <span><i class="fas fa-lock"></i></span>
+        </div>
+        <div class="money-details">
+            <span>Parolă nouă:</span>
+            <input type="password" id="new-pwd" placeholder="Introduceți noua parolă">
+        </div>
+        <button class="btn-primary" id="btn-change-pwd" style="margin-top: 10px;">Schimbă Parolă</button>
+        <div id="pwd-message" style="margin-top: 10px; font-size: 0.9rem; display: none;"></div>
+    </div>
+
+</main>
+
+<script src="js/task13.js"></script>
+
+</body>
+</html>
