@@ -1,7 +1,7 @@
 // Login credentials and access control
 const loginCredentials = {
-  user: { password: 'user', role: 'child', accessibleTasks: [2, 5] },
-  parinte: { password: 'parinte', role: 'parent', accessibleTasks: [1, 2, 3, 4, 6, 7, 8, 9, 10, 11, 12] }
+  user: { password: 'user', role: 'user', accessibleTasks: [2, 5] },
+  admin: { password: 'admin', role: 'admin', accessibleTasks: [1, 2, 3, 4, 6, 7, 8, 9, 10, 11, 12] }
 };
 
 document.getElementById('loginForm').addEventListener('submit', (e) => {
